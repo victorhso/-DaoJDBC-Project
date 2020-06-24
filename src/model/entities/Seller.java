@@ -28,6 +28,14 @@ public class Seller implements Serializable{
 		this.department = department;
 	}
 
+	public Department getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
+	
 	public Integer getId() {
 		return id;
 	}
@@ -50,6 +58,14 @@ public class Seller implements Serializable{
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public Double getBaseSalary() {
+		return baseSalary;
+	}
+
+	public void setBaseSalary(Double baseSalary) {
+		this.baseSalary = baseSalary;
 	}
 
 	public Date getBithDate() {
