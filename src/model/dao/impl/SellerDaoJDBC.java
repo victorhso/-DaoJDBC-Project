@@ -62,9 +62,7 @@ public class SellerDaoJDBC implements SellerDAO{
 		}
 		finally{
 			DB.closeStatement(st);
-			
 		}
-		
 	}
 
 	@Override
@@ -108,20 +106,18 @@ public class SellerDaoJDBC implements SellerDAO{
 			if(rows == 0) {
 				throw new DbException("Erro! Não existe o usuário com ID informado.");
 			}
-			
 		}
 		catch(SQLException e) {
 			throw new DbException(e.getMessage());
 		}
 		finally {
 			DB.closeStatement(st);
-		}
-		
-		
+		}		
 	}
 
 	@Override
 	public Seller findById(Integer id) {
+		
 		PreparedStatement st = null;
 		ResultSet rs = null;
 		try {
@@ -170,6 +166,7 @@ public class SellerDaoJDBC implements SellerDAO{
 
 	@Override
 	public List<Seller> findAll() {
+		
 		PreparedStatement st = null;
 		ResultSet rs = null;
 		try {
@@ -209,6 +206,7 @@ public class SellerDaoJDBC implements SellerDAO{
 
 	@Override
 	public List<Seller> findByDepartment(Department department) {
+		
 		PreparedStatement st = null;
 		ResultSet rs = null;
 		try {
@@ -247,5 +245,4 @@ public class SellerDaoJDBC implements SellerDAO{
 			DB.closeResultSet(rs);
 		}
 	}
-
 }
